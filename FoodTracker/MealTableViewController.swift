@@ -1,11 +1,10 @@
 //
-//  MealTableViewController.swift
-//  FoodTracker
+//  ViewController.swift
+//  Projet_tchek
 //
-//  Created by Jane Appleseed on 11/15/16.
-//  Copyright © 2016 Apple Inc. All rights reserved.
+//  Created by Islam on 26/04/2018.
+//  Copyright © 2018 Islam. All rights reserved.
 //
-
 import UIKit
 import os.log
 
@@ -110,22 +109,6 @@ class MealTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     
     //MARK: - Navigation
@@ -189,20 +172,17 @@ class MealTableViewController: UITableViewController {
     
     private func loadSampleMeals() {
         
-        let photo1 = UIImage(named: "meal1")
-        let photo2 = UIImage(named: "meal2")
-        let photo3 = UIImage(named: "meal3")
 
-        guard let meal1 = Meal(name: "Caprese Salad", categ:"Catogry 1") else {
-            fatalError("Unable to instantiate meal1")
+        guard let meal1 = Meal(name: " Task1", categ:"Catogry 1",date1 : Date()) else {
+            fatalError("Unable to instantiate Task1")
         }
 
-        guard let meal2 = Meal(name: "Chicken and Potatoes", categ:"Catogry 1") else {
-            fatalError("Unable to instantiate meal2")
+        guard let meal2 = Meal(name: "Task2", categ:"Catogry 1",date1 : Date()) else {
+            fatalError("Unable to instantiate Task2")
         }
 
-        guard let meal3 = Meal(name: "Pasta with Meatballs", categ:"Catogry 1") else {
-            fatalError("Unable to instantiate meal2")
+        guard let meal3 = Meal(name: "Task3", categ:"Catogry 1",date1 : Date()) else {
+            fatalError("Unable to instantiate Task3")
         }
 
         meals += [meal1, meal2, meal3]

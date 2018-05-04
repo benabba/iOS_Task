@@ -38,6 +38,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         Category.delegate = self
         
         let selectedDate = CompletionDate.date
+        print(selectedDate)
         //let Format = DateFormatter()
         //Format.dateStyle = DateFormatter.Style.medium
         //date = "Date:\(Format.string(form:selectedDate))"
@@ -113,9 +114,10 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         let categ = Category.text ?? ""
        // let photo = photoImageView.image
        // let rating = ratingControl.rating
+        let selectedDate = CompletionDate.date
         
         // Set the meal to be passed to MealTableViewController after the unwind segue.
-        meal = Meal(name: name, categ: categ)
+        meal = Meal(name: name, categ: categ,date1: selectedDate)
     }
     
     
